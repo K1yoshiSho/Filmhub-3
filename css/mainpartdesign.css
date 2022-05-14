@@ -1,0 +1,296 @@
+/* Основне */
+
+body {
+    background-color: #ffffff;
+}
+
+
+/* Активный пэйдж */
+
+.breadcrumb-item.active {
+    color: #6c757d;
+    font-family: Satoshi;
+}
+
+#autocomplete {
+    padding: 3px;
+    font-size: 0.7rem;
+}
+
+
+/* Активный пэйдж */
+
+
+/* Трейлер и постеры */
+
+#trailer_text {
+    margin-bottom: 25px;
+    margin-top: 30px;
+    opacity: 0.6;
+}
+
+#somecuts_text {
+    margin-bottom: 25px;
+    margin-top: 30px;
+    opacity: 0.6;
+}
+
+
+/* Трейлер и постеры */
+
+
+/* Информации в инфобаре */
+
+.infobar {
+    padding-top: 20px;
+    font-size: 17px;
+    font-family: 'Satoshi', sans-serif;
+}
+
+
+/* Информации в инфобаре */
+
+
+/* Линии для перехода между блоками */
+
+.line {
+    width: 100%;
+    max-width: 670px;
+    height: 2px;
+    background: dimgrey;
+    border-radius: 2px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    opacity: 0.4;
+    cursor: default;
+}
+
+.line-long {
+    width: 100%;
+    max-width: 1500px;
+    height: 2px;
+    background: dimgrey;
+    border-radius: 2px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    opacity: 0.4;
+    cursor: default;
+}
+
+
+/* Линии для перехода между блоками */
+
+
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.ttf') format('truetype');
+}
+
+
+/* Подключение шрифтов */
+
+
+/* Шрифты элементов */
+
+h2 {
+    font-family: 'Satoshi', sans-serif;
+}
+
+h3 {
+    font-family: 'Satoshi', sans-serif;
+    color: black;
+}
+
+h4 {
+    font-family: 'Satoshi', sans-serif;
+}
+
+.h5,
+h5 {
+    font-size: 17px;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.dropdown-item {
+    font-family: 'Satoshi', sans-serif;
+    opacity: 0.6;
+}
+
+em {
+    font-family: 'Satoshi';
+    font-style: italic;
+    opacity: 0.6;
+}
+
+a {
+    text-decoration: none;
+    font-family: Satoshi;
+    color: red;
+}
+
+a:hover {
+    color: #ff6f6f
+}
+
+b {
+    font-weight: bolder;
+    font-family: 'Satoshi';
+}
+
+p {
+    font-family: Satoshi;
+    opacity: 0.6;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: 'Satoshi';
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/* Шрифты элементов */
+
+
+/* Основне */
+
+
+/* Banner and button & адаптация сайта под разные размеры */
+
+.banner {
+    position: relative;
+}
+
+.button a {
+    border-radius: 6px;
+    background-color: red;
+    font-family: 'Satoshi', sans-serif;
+}
+
+
+/* Мобильная адаптация столбцов */
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+
+
+/* Мобильная адаптация столбцов */
+
+
+/* Watch now button */
+
+.readmore {
+    position: relative;
+    left: 130px;
+    top: 20px;
+    font-family: 'Satoshi', sans-serif;
+    color: red
+}
+
+
+/* Watch now button */
+
+
+/* Цвет кнопок навигационного бара */
+
+.navbar-light .navbar-nav .nav-link {
+    color: black
+}
+
+
+/* Цвет кнопок навигационного бара */
+
+
+/* Banner and button & адаптация сайта под разные размеры */
+
+
+/* Кнопки */
+
+.btn-danger {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+    margin: 10px;
+}
+
+.btn-danger:hover {
+    color: #ff6f6f;
+}
+
+.btn-outline-danger {
+    color: red;
+    border-color: red;
+}
+
+.btn-outline-danger:hover {
+    background-color: red;
+    border-color: red;
+}
+
+
+/* Кнопки */

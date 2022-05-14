@@ -1,0 +1,683 @@
+*{
+    box-sizing: border-box;
+}
+.search{
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    margin-right: 0.5rem;
+}
+.search:hover{
+    border: 1px solid #ff7b7b;
+}
+.search:active{
+    border: 1px solid #ff7b7b;
+    box-shadow: #ff7b7b;
+}
+
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    border-radius: 3px;
+    position:relative;
+    overflow: hidden;
+}
+
+
+.movie img{
+    width:100%;
+    border-radius: 24px;
+}
+
+.movie-info{
+    justify-content: space-between;
+    letter-spacing: 0.5px;
+}
+.movie-info b{
+    opacity: 1;
+}
+.movie-info h3{
+    margin-top: 0;
+}
+
+.movie-info span{
+    font-size: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green{
+    color:lightgreen;
+}
+
+.movie-info span.orange{
+    color:orange;
+}
+
+.movie-info span.red{
+    color:red;
+}
+
+#tags{
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.tag{
+    color:white;
+    padding:2px 5px;
+    background-color: #ff7979;
+    border-radius: 50px;
+    margin:5px;
+    display:inline-block;
+    cursor: pointer;
+}
+
+.tag.highlight{
+    background-color: red;
+}
+.no-results{
+    color:white;
+}
+
+.pagination{
+    display:flex;
+    margin:10px 30px;
+    align-items: center;
+    justify-content: center;
+    color:#2a2a2a;
+}
+
+.page{
+    padding:20px;
+    cursor:pointer;
+}
+
+.page.disabled{
+    cursor:not-allowed;
+    color:grey;
+}
+
+.current{
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 5px solid red;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.know-more{
+    background-color: orange;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+    border:0;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 5px;
+}
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+.embed.hide{
+    display: none;
+}
+
+.embed.show{
+    display: inline-block;
+}
+
+.arrow{
+    position: absolute;
+    font-size: 40px;
+}
+
+.arrow.left-arrow{
+    top:50%;
+    left:5%;
+    transform: translateY(-50%);
+}
+
+
+.arrow.right-arrow{
+    top:50%;
+    transform: translateY(-50%);
+    right:5%;
+}
+
+.dots{
+    margin-top: 30px;
+}
+
+.dots .dot {
+    padding: 5px 15px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+    /* Основне */
+
+    .form-control[type=file] {
+     overflow: hidden
+    }
+
+    .form-control[type=file]:not(:disabled):not([readonly]) {
+     cursor: pointer
+    }
+
+    .form-control:focus {
+     color: #212529;
+     background-color: #fff;
+     border-color: #ff0000;
+     outline: 0;
+     box-shadow: 0 0 0 .25rem rgba(255, 132, 132, 0.25)
+    }
+
+/*.jumbotron.alert-secondary{*/
+/*  padding: 15px;*/
+/*}*/
+.breadcrumb-item.active {
+  color: #6c757d;
+  font-family: Satoshi;
+}
+
+    .contact .contact-form .input-group-text {
+        padding: 12px 15px;
+        border: none;
+        background-color: #ff0000;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        bottom: 0
+    }
+
+    .contact .contact-form .form-control {
+        padding: 12px 20px !important;
+        padding-left: 58px !important;
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+        border-radius: .25rem
+    }
+
+.itemactive{
+    text-decoration: none;
+  font-family: Satoshi;
+  color: red
+}
+.itemactive:hover{
+    text-decoration: none;
+  font-family: Satoshi;
+  color: #ff4646
+}
+    body {
+      background-color: white
+    }
+    /* Цвет основного фона */
+
+    .bg-light {
+      --bs-bg-opacity: 0;
+      background-color: white;
+    }
+    /* Цвет фона второй части*/
+    /* Подключение шрифтов */
+#autocomplete {
+  padding: 3px;
+  font-size: 0.7rem;
+}
+.button a{
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button a:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(5px);
+}
+
+.btn-secondary {
+      font-family: 'Satoshi';
+    }
+
+/* Цвет кнопок навигационного бара */
+
+.navbar-light .navbar-nav .nav-link {
+  color: black
+}
+
+/* Цвет кнопок навигационного бара */
+readmore {
+    position: relative;
+    left: 500px;
+    top: -20px;
+    font-family: 'Satoshi', sans-serif;
+    color: red;
+    font-size: 0.5rem;
+  }
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.ttf') format('truetype');
+    }
+    /* Подключение шрифтов */
+    /* След/пред часть, шрифты */
+
+    .pagination {
+      display: flex;
+      padding-left: 0;
+      list-style: none;
+      font-family: 'Satoshi', sans-serif;
+    }
+
+    .page-item.active .page-link {
+      color: #fff;
+      background-color: red;
+      border-color: red;
+    }
+
+.col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+    @media only screen and (max-width: 1200px) {
+      /* For mobile phones: */
+      [class*="col-"] {
+        width: 100%;
+      }
+    }
+
+    .page-link {
+      color: red;
+      background-color: white;
+      border: white solid;
+    }
+
+    .page-link:hover {
+      color: red;
+      border-color: white;
+      border-color: white;
+    }
+
+    .page-link:focus {
+      color: red;
+      background-color: white;
+    }
+    /* След/пред часть, шрифты */
+    /* Шрифты элементов */
+
+a{
+  font-family: 'Satoshi', sans-serif;
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: white;
+}
+
+    h2 {
+      font-family: 'Satoshi', sans-serif;
+    }
+
+h3 {
+  font-family: 'Satoshi', sans-serif;
+  color: black;
+    padding: 15px;
+}
+
+    h4 {
+      font-family: 'Satoshi', sans-serif;
+    }
+
+    .h5,
+    h5 {
+      font-size: 17px;
+      font-family: 'Satoshi', sans-serif;
+    }
+
+/* Dropdown menu */
+
+    .dropdown-item {
+      font-family: 'Satoshi', sans-serif;
+      opacity: 0.6;
+    }
+
+.dropdown-item:hover,
+  .dropdown-item:focus {
+    color: red;
+  }
+
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: white;
+    text-decoration: none;
+    background-color: red
+  }
+
+/* Dropdown menu */
+
+    .text-muted {
+      font-family: 'Satoshi', sans-serif;
+    }
+
+    em {
+      font-family: 'Satoshi';
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    .card-text:last-child {
+      font-family: 'Satoshi';
+      opacity: 0.6;
+    }
+
+    b {
+      font-weight: bolder;
+      font-family: 'Satoshi';
+      opacity: 0.6;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: 'Satoshi';
+    }
+
+    section {
+      padding-top: 15px;
+      padding-bottom: 50px;
+    }
+    /* Шрифты элементов */
+    /* Основне */
+    /* Banner and button & адаптация сайта под разные размеры */
+
+    .banner {
+      position: relative;
+    }
+
+    .button a {
+      border-radius: 6px;
+      background-color: red;
+      font-family: 'Satoshi', sans-serif;
+    }
+    /* Мобилка */
+@media (min-width: 360px) {
+  .button a {
+    position: absolute;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    top: 70%;
+    left: 105px;
+    text-align: center;
+  }
+  .card-title {
+    font-size: 0.8rem;
+  }
+  .card-text {
+    font-size: 0.7rem;
+  }
+  .card {
+    margin-bottom: 50px;
+    margin: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+  .card-img-top {
+    border-radius: 10px;
+  }
+  p{
+      font-family: Satoshi;
+  }
+  .g-custom {
+    --bs-gutter-x: 3rem;
+    --bs-gutter-y: 1.5rem;
+  }
+  .col {
+    position: relative;
+    padding: 30px;
+  }
+
+  .btn {
+    font-size: 0.7rem;
+  }
+  .form-control {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .button a {
+    position: absolute;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    top: 70%;
+    left: 175px;
+    text-align: center;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card {
+    width: 100%;
+    margin: auto;
+    border-radius: 25px;
+  }
+
+}
+
+
+@media (min-width: 992px) {
+  .button a {
+    position: absolute;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 0.4rem;
+    font-size: 1rem;
+    top: 70%;
+    left: 250px;
+    text-align: center;
+  }
+  .card-text {
+    font-size: 0.8rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+  .form-control {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button a {
+    position: absolute;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 2rem;
+    top: 70%;
+    left: 325px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card {
+    margin-bottom: 50px;
+    margin: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media (min-width: 1400px) {
+  .card {
+    margin-bottom: 50px;
+    margin: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+}
+    /* Banner and button & адаптация сайта под разные размеры */
+    /* Icon prev and next */
+
+    .carousel-control-prev-icon {
+      background-image: url('public/img/icons/left-arrow.svg')
+    }
+
+    .carousel-control-next-icon {
+      background-image: url('public/img/icons/right-arrow.svg')
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+      width: 25px;
+    }
+
+    .carousel-control-prev {
+      left: -20px;
+      color: red
+    }
+
+    .carousel-control-next {
+      right: -20px;
+    }
+    /* Icon prev and next */
+    /* Кнопки */
+
+    .btn-danger {
+      color: #fff;
+      background-color: red;
+      border-color: red;
+    }
+
+    .btn-danger:hover {
+      color: indianred;
+    }
+
+    .btn-outline-danger {
+      color: red;
+      border-color: red;
+    }
+
+    .btn-outline-danger:hover {
+      background-color: red;
+      border-color: red;
+    }
+    /* Кнопки */
+
+    .line-long {
+      width: 100%;
+      max-width: 1500px;
+      height: 2px;
+      background: dimgrey;
+      border-radius: 2px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      opacity: 0.4;
+      cursor: default;
+    }

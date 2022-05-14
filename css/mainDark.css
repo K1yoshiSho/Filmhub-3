@@ -1,0 +1,507 @@
+/* Основне */
+
+body {
+  background-color: #000;
+}
+
+
+/* Цвет основного фона */
+
+.bg-light {
+  --bs-bg-opacity: 0;
+  background-color: #171717;
+}
+
+.bg-dark {
+  background-color: #141414;
+}
+
+
+/* Цвет фона второй части*/
+
+.button a{
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 5px #6d2727;
+}
+
+.button a:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(5px);
+}
+
+.btn-secondary {
+      font-family: 'Satoshi';
+    }
+/* Подключение шрифтов */
+
+readmore {
+  position: relative;
+  left: 500px;
+  top: -20px;
+  font-family: 'Satoshi', sans-serif;
+  color: red;
+  font-size: 0.5rem;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.ttf') format('truetype');
+}
+
+
+/* Подключение шрифтов */
+
+
+/* След/пред часть, шрифты */
+
+.pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.page-item.active .page-link {
+  color: #222;
+  background-color: red;
+  border-color: red;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+.page-link {
+  color: red;
+  background-color: #222121;
+  border: #222121;
+}
+
+.page-link:hover {
+  color: red;
+  border-color: #272727;
+}
+
+.page-link:focus {
+  color: red;
+  background-color: #222121;
+}
+
+
+/* След/пред часть, шрифты */
+
+
+/* Шрифты элементов */
+
+a {
+  font-family: 'Satoshi', sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+h2 {
+  font-family: 'Satoshi', sans-serif;
+  color: #fff;
+}
+
+h3 {
+  font-family: 'Satoshi', sans-serif;
+  color: #fff;
+}
+
+h4 {
+  font-family: 'Satoshi', sans-serif;
+}
+
+.h5,
+h5 {
+  font-size: 17px;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+/* Dropdown menu */
+
+.dropdown-item {
+  font-family: 'Satoshi', sans-serif;
+  opacity: .8;
+  color: #fff;
+}
+
+.dropdown-menu {
+  color: #fff;
+  background-color: #212529;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: red;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #141414;
+  text-decoration: none;
+  background-color: red;
+}
+
+
+/* Dropdown menu */
+
+.text-muted {
+  font-family: 'Satoshi', sans-serif;
+}
+
+footer {
+  color: #fff;
+  opacity: .8;
+}
+
+em {
+  font-family: 'Satoshi';
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.card-text:last-child {
+  font-family: 'Satoshi';
+  opacity: 0.6;
+}
+
+b {
+  font-weight: bolder;
+  font-family: 'Satoshi';
+  opacity: 0.6;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: 'Satoshi';
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+/* Шрифты элементов */
+
+
+/* Основне */
+
+
+/* Banner and button & адаптация сайта под разные размеры */
+
+.banner {
+  position: relative;
+}
+
+.button a {
+  border-radius: 6px;
+  background-color: red;
+  font-family: 'Satoshi', sans-serif;
+}
+
+
+/* Мобилка */
+
+@media (min-width: 360px) {
+  .button a {
+    position: absolute;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: .0.4rem;
+    font-size: 0.9rem;
+    top: 70%;
+    left: 105px;
+    text-align: center;
+  }
+  .card-title {
+    font-size: 0.8rem;
+  }
+  .card-text {
+    font-size: 0.7rem;
+  }
+  .card {
+    margin-bottom: 50px;
+    margin: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+  .card-img-top {
+    border-radius: 10px;
+  }
+  .g-custom {
+    --bs-gutter-x: 3rem;
+    --bs-gutter-y: 1.5rem;
+  }
+  .col {
+    position: relative;
+    padding: 30px;
+  }
+  .btn {
+    font-size: 0.7rem;
+  }
+  .form-control {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .button a {
+    position: absolute;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: .0.4rem;
+    font-size: 0.8rem;
+    top: 70%;
+    left: 175px;
+    text-align: center;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card {
+    width: 100%;
+    margin: auto;
+    border-radius: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  .button a {
+    position: absolute;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: .0.4rem;
+    font-size: 1rem;
+    top: 70%;
+    left: 250px;
+    text-align: center;
+  }
+  .card-text {
+    font-size: 0.8rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+  }
+  .form-control {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .button a {
+    position: absolute;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 2rem;
+    top: 70%;
+    left: 325px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .card {
+    margin-bottom: 50px;
+    margin: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card {
+    margin-bottom: 50px;
+    margin: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+
+/* Цвет гиперссылок на навигационном баре */
+
+
+/* Banner and button & адаптация сайта под разные размеры */
+
+
+/* Icon prev and next */
+
+.carousel-control-prev-icon {
+  background-image: url(/img/icons/left-arrow.svg)
+}
+
+.carousel-control-next-icon {
+  background-image: url(/img/icons/right-arrow.svg)
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 25px;
+}
+
+.carousel-control-prev {
+  left: -20px;
+  color: red
+}
+
+.carousel-control-next {
+  right: -20px;
+}
+
+
+/* Icon prev and next */
+
+
+/* Кнопки */
+
+.btn-danger {
+  color: #141414;
+  background-color: red;
+  border-color: red;
+}
+
+.btn-danger:hover {
+  color: #272727;
+}
+
+.btn-outline-danger {
+  color: red;
+  border-color: red;
+}
+
+.btn-outline-danger:hover {
+  background-color: red;
+  border-color: red;
+  color: #272727;
+}
+
+
+/* Кнопки */
+
+.line-long {
+  width: 100%;
+  max-width: 1500px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  opacity: 0.4;
+  cursor: default;
+}
+
+.form-control {
+  background-color: #141414;
+  border: 1px solid #fff;
+}
+
+.text-muted {
+  color: darkgrey!important;
+}
+
+.card {
+  background-color: #222121;
+  color: #fff;
+}
+
+#watchButBW {
+  background-color: red;
+  color: white;
+  border-radius: 0.25rem;
+  margin-left: 185px;
+}
+
+#watchButBW:hover {
+  background-color: red;
+  color: #141414;
+}
+
+.navbar-nav .nav-link .b {
+  color: #fff;
+}
+
+.bg-dark {
+  --bs-dark-rgb: #141414!important;
+}

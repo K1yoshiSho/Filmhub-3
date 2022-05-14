@@ -1,0 +1,99 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white
+}
+
+.form-control {
+  display: block;
+  width: 250px;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.ttf') format('truetype');
+}
+
+h1 {
+  font-family: Satoshi;
+}
+
+.form-login {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  font-family: Satoshi;
+  font-size: 2rem;
+}
+
+.form-login .checkbox {
+  font-weight: 400;
+}
+
+
+/* Тип формы */
+
+.form-login input[type="email"] {
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-login input[type="password"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+/* Тип формы */
+
+a {
+  text-decoration: none;
+  color: #dc3545;
+}
+
+a:hover {
+  color: #ff6b6b
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: red;
+  border-color: red;
+  border-radius: 2rem;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+
+/* Адаптация */
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 290px) {
+  .form-login {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* Адаптация */
